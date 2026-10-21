@@ -1,0 +1,20 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.primer_trimestre.b06_primeratoast.app-mergeDebugResources-33:/values-hdpi-v4/values-hdpi-v4.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\anxov\\.gradle\\caches\\9.5.0\\transforms\\fbfda2981014b8e861712f4f197eeb49\\transformed\\appcompat-1.8.0\\res\\values-hdpi-v4\\values-hdpi-v4.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "6",
+                        "endColumns": "13",
+                        "endOffsets": "327"
+                    }
+                }
+            ]
+        }
+    ]
+}

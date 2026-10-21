@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">b09_intent</string>
+    <string name="first_text">TAREA 9 : CARGAR IMAGEN EN IMAGEVIEW </string>
+    <string name="first_button"> CARGAR IMAGEN </string>
+
+</resources>

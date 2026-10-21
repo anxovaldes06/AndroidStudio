@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">b06_primeraToast</string>
+    <string name="toast_message">¡MI PRIMER TOAST!</string>
+    <string name="btn_show_toast">Mostrar Toast</string>
+</resources>

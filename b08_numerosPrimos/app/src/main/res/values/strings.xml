@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">b08_numerosPrimosç</string>
+    <string name="first_edittext">CALCULAR</string>
+    <string name="first_text">8 Numeros Primos</string>
+    <string name="second_text">TextView</string>
+
+
+</resources>

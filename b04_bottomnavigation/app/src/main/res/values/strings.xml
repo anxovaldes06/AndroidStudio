@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">b04_bottomnavigation</string>
+    <string name="title_home">Inicio</string>
+    <string name="title_dashboard">Panel</string>
+    <string name="title_notifications">Notificaciones</string>
+    <string name="title_account">Cuenta</string>
+</resources>

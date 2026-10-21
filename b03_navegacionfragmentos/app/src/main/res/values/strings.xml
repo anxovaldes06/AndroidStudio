@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">GALIRUTAS</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">GALIRUTAS</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Consultar rutas</string>
+    <string name="previous">Volver página inicio</string>
+    <string name="next1">Ir a página 2</string>
+    <string name="previous_page">Volver a página 1</string>
+
+    <string name="info">
+        Galirutas es una app de búsqueda de rutas cercanas a ti, por ahora solo con disponibilidad
+        en la comunidad autónoma de Galicia.
+    </string>
+    <string name="pag1">
+            Esta es la página 1 de mi app
+
+    </string>
+
+    <string name="pag2">
+            Esta es la página 2 de mi app
+
+    </string>
+    <string name="action_share_location">Permitir compartir tu ubicación en tiempo real</string>
+    <string name="location_enabled">Ubicación en tiempo real activada</string>
+    <string name="location_disabled">Ubicación en tiempo real desactivada</string>
+</resources>

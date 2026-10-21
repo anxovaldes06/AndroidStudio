@@ -1,0 +1,86 @@
+[
+    {
+        "merged": "C:\\Users\\anxov\\.gradle\\daemon\\9.5.0\\com.primer_trimestre.b06_primeratoast.app-debug-35:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\anxov\\.gradle\\daemon\\9.5.0\\com.primer_trimestre.b06_primeratoast.app-main-37:\\mipmap-xxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\anxov\\.gradle\\daemon\\9.5.0\\com.primer_trimestre.b06_primeratoast.app-debug-35:\\mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\anxov\\.gradle\\daemon\\9.5.0\\com.primer_trimestre.b06_primeratoast.app-main-37:\\mipmap-hdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\anxov\\.gradle\\daemon\\9.5.0\\com.primer_trimestre.b06_primeratoast.app-debug-35:\\drawable_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\anxov\\.gradle\\daemon\\9.5.0\\com.primer_trimestre.b06_primeratoast.app-main-37:\\drawable\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "C:\\Users\\anxov\\.gradle\\daemon\\9.5.0\\com.primer_trimestre.b06_primeratoast.app-debug-35:\\drawable_ic_menu_slideshow.xml.flat",
+        "source": "C:\\Users\\anxov\\.gradle\\daemon\\9.5.0\\com.primer_trimestre.b06_primeratoast.app-main-37:\\drawable\\ic_menu_slideshow.xml"
+    },
+    {
+        "merged": "C:\\Users\\anxov\\.gradle\\daemon\\9.5.0\\com.primer_trimestre.b06_primeratoast.app-debug-35:\\drawable_side_nav_bar.xml.flat",
+        "source": "C:\\Users\\anxov\\.gradle\\daemon\\9.5.0\\com.primer_trimestre.b06_primeratoast.app-main-37:\\drawable\\side_nav_bar.xml"
+    },
+    {
+        "merged": "C:\\Users\\anxov\\.gradle\\daemon\\9.5.0\\com.primer_trimestre.b06_primeratoast.app-debug-35:\\drawable_ic_menu_gallery.xml.flat",
+        "source": "C:\\Users\\anxov\\.gradle\\daemon\\9.5.0\\com.primer_trimestre.b06_primeratoast.app-main-37:\\drawable\\ic_menu_gallery.xml"
+    },
+    {
+        "merged": "C:\\Users\\anxov\\.gradle\\daemon\\9.5.0\\com.primer_trimestre.b06_primeratoast.app-debug-35:\\mipmap-anydpi_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\anxov\\.gradle\\daemon\\9.5.0\\com.primer_trimestre.b06_primeratoast.app-main-37:\\mipmap-anydpi\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\anxov\\.gradle\\daemon\\9.5.0\\com.primer_trimestre.b06_primeratoast.app-debug-35:\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\anxov\\.gradle\\daemon\\9.5.0\\com.primer_trimestre.b06_primeratoast.app-main-37:\\drawable\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\anxov\\.gradle\\daemon\\9.5.0\\com.primer_trimestre.b06_primeratoast.app-debug-35:\\mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\anxov\\.gradle\\daemon\\9.5.0\\com.primer_trimestre.b06_primeratoast.app-main-37:\\mipmap-mdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\anxov\\.gradle\\daemon\\9.5.0\\com.primer_trimestre.b06_primeratoast.app-debug-35:\\mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\anxov\\.gradle\\daemon\\9.5.0\\com.primer_trimestre.b06_primeratoast.app-main-37:\\mipmap-xxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\anxov\\.gradle\\daemon\\9.5.0\\com.primer_trimestre.b06_primeratoast.app-debug-35:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\anxov\\.gradle\\daemon\\9.5.0\\com.primer_trimestre.b06_primeratoast.app-main-37:\\mipmap-xhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.primer_trimestre.b06_primeratoast.app-debug-35:/layout_activity_main.xml.flat",
+        "source": "com.primer_trimestre.b06_primeratoast.app-main-37:/layout/activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\anxov\\.gradle\\daemon\\9.5.0\\com.primer_trimestre.b06_primeratoast.app-debug-35:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\anxov\\.gradle\\daemon\\9.5.0\\com.primer_trimestre.b06_primeratoast.app-main-37:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\anxov\\.gradle\\daemon\\9.5.0\\com.primer_trimestre.b06_primeratoast.app-debug-35:\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\anxov\\.gradle\\daemon\\9.5.0\\com.primer_trimestre.b06_primeratoast.app-main-37:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\anxov\\.gradle\\daemon\\9.5.0\\com.primer_trimestre.b06_primeratoast.app-debug-35:\\mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\anxov\\.gradle\\daemon\\9.5.0\\com.primer_trimestre.b06_primeratoast.app-main-37:\\mipmap-hdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\anxov\\.gradle\\daemon\\9.5.0\\com.primer_trimestre.b06_primeratoast.app-debug-35:\\drawable_ic_menu_accessibility.xml.flat",
+        "source": "C:\\Users\\anxov\\.gradle\\daemon\\9.5.0\\com.primer_trimestre.b06_primeratoast.app-main-37:\\drawable\\ic_menu_accessibility.xml"
+    },
+    {
+        "merged": "C:\\Users\\anxov\\.gradle\\daemon\\9.5.0\\com.primer_trimestre.b06_primeratoast.app-debug-35:\\mipmap-anydpi_ic_launcher.xml.flat",
+        "source": "C:\\Users\\anxov\\.gradle\\daemon\\9.5.0\\com.primer_trimestre.b06_primeratoast.app-main-37:\\mipmap-anydpi\\ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Users\\anxov\\.gradle\\daemon\\9.5.0\\com.primer_trimestre.b06_primeratoast.app-debug-35:\\mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\anxov\\.gradle\\daemon\\9.5.0\\com.primer_trimestre.b06_primeratoast.app-main-37:\\mipmap-xhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\anxov\\.gradle\\daemon\\9.5.0\\com.primer_trimestre.b06_primeratoast.app-debug-35:\\mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\anxov\\.gradle\\daemon\\9.5.0\\com.primer_trimestre.b06_primeratoast.app-main-37:\\mipmap-mdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\anxov\\.gradle\\daemon\\9.5.0\\com.primer_trimestre.b06_primeratoast.app-debug-35:\\drawable_ic_menu_camera.xml.flat",
+        "source": "C:\\Users\\anxov\\.gradle\\daemon\\9.5.0\\com.primer_trimestre.b06_primeratoast.app-main-37:\\drawable\\ic_menu_camera.xml"
+    },
+    {
+        "merged": "C:\\Users\\anxov\\.gradle\\daemon\\9.5.0\\com.primer_trimestre.b06_primeratoast.app-debug-35:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\anxov\\.gradle\\daemon\\9.5.0\\com.primer_trimestre.b06_primeratoast.app-main-37:\\mipmap-xxxhdpi\\ic_launcher.webp"
+    }
+]

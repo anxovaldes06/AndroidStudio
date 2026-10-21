@@ -1,0 +1,20 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.primer_trimestre.b06_primeratoast.app-mergeDebugResources-33:/values-watch-v20/values-watch-v20.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\anxov\\.gradle\\caches\\9.5.0\\transforms\\fbfda2981014b8e861712f4f197eeb49\\transformed\\appcompat-1.8.0\\res\\values-watch-v20\\values-watch-v20.xml",
+                    "from": {
+                        "startLines": "2,5,8",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,214,385",
+                        "endLines": "4,7,10",
+                        "endColumns": "12,12,12",
+                        "endOffsets": "209,380,553"
+                    }
+                }
+            ]
+        }
+    ]
+}

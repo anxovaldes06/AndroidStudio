@@ -1,0 +1,12 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme -->
+    <style name="Base.Theme.B03_navegacionfragmentos"
+        parent="Theme.Material3.DayNight.NoActionBar">
+
+    </style>
+
+    <style name="Theme.B03_navegacionfragmentos"
+        parent="Base.Theme.B03_navegacionfragmentos" />
+
+</resources>

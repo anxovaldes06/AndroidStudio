@@ -1,0 +1,22 @@
+R_DEF: Internal format may change without notice
+local
+color black
+color white
+drawable ic_launcher_background
+drawable ic_launcher_foreground
+drawable ic_menu_accessibility
+drawable ic_menu_camera
+drawable ic_menu_gallery
+drawable ic_menu_slideshow
+drawable side_nav_bar
+id btn_toast
+id main
+id tv_title
+layout activity_main
+mipmap ic_launcher
+mipmap ic_launcher_round
+string app_name
+string btn_show_toast
+string toast_message
+style Base.Theme.B06_primeraToast
+style Theme.B06_primeraToast
