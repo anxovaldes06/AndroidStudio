@@ -8,7 +8,6 @@
     tools:context=".MainActivity">
 
 
-
     <TextView
         android:id="@+id/titulo"
         android:layout_width="wrap_content"
@@ -55,9 +54,9 @@
         android:id="@+id/resultado"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:hint="resultado"
         android:text=""
         android:textSize="30sp"
-        android:hint="resultado"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
