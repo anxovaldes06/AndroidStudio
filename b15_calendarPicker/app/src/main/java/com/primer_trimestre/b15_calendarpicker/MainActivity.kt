@@ -11,7 +11,6 @@ import androidx.core.view.OnApplyWindowInsetsListener
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import java.text.SimpleDateFormat
-import java.util.Date
 import java.util.Locale
 
 class MainActivity : AppCompatActivity() {
