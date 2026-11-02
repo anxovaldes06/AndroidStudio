@@ -1,16 +1,29 @@
 package com.primer_trimestre.b17_recyclerview
 
 import android.os.Bundle
+import android.util.Log
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.primer_trimestre.b17_recyclerview.BuildConfig.API_KEY
 import com.primer_trimestre.b17_recyclerview.databinding.ActivityMainBinding
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
+import org.json.JSONObject
+import java.net.HttpURLConnection
+import java.net.URI
+import java.net.URLEncoder
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
+    private val misPaises = mutableListOf<Pais>()
+    private lateinit var adapter: PaisesAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,25 +37,17 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
-        val misTextos = mutableListOf(
-            "🇨🇦 Canadá",
-            "🇿🇼 Zimbabue",
-            "🇦🇫 Afganistán",
-            "🇷🇺 Rusia",
-            "🇸🇷 Serbia",
-            "🇨🇴 Colombia",
-            "🇻🇪 Venezuela",
-            "🇨🇭 Suiza",
-            "🇵🇱 Polonia",
-            "🇦🇴 Angola"
-        )
+        misPaises.add(Pais("Canada", "Ottawa", "https://flagcdn.com/w320/ca.png"))
+        misPaises.add(Pais("Japan", "Tokyo", "https://flagcdn.com/w320/jp.png"))
+        misPaises.add(Pais("Spain", "Madrid", "https://flagcdn.com/w320/es.png"))
+        misPaises.add(Pais("Italy", "Rome", "https://flagcdn.com/w320/it.png"))
 
-        lateinit var adapter: TextosAdapter
-        adapter = TextosAdapter(misTextos) { textoBorrado ->
-            val index = misTextos.indexOf(textoBorrado)
+        adapter = PaisesAdapter(misPaises) { paisBorrado ->
+            val index = misPaises.indexOf(paisBorrado)
             if (index != -1) {
-                misTextos.removeAt(index)
+                misPaises.removeAt(index)
                 adapter.notifyItemRemoved(index)
+                Toast.makeText(this, "Eliminado: ${paisBorrado.nombre}", Toast.LENGTH_SHORT).show()
             }
         }
 
@@ -50,51 +55,84 @@ class MainActivity : AppCompatActivity() {
         binding.RecyclerView.adapter = adapter
 
         binding.Button.setOnClickListener {
-            val nuevoTexto = binding.EditText.text.toString().trim()
-            if (nuevoTexto.isNotBlank()) {
-                val textoConBandera = if (nuevoTexto.any { Character.isSurrogate(it) }) {
-                    nuevoTexto
-                } else {
-                    agregarBandera(nuevoTexto)
+            val nombrePais = binding.EditText.text.toString().trim()
+
+            if (nombrePais.isNotBlank()) {
+                lifecycleScope.launch(Dispatchers.IO) {
+                    val paisObtenido = consultarApiRestCountries(nombrePais)
+
+                    withContext(Dispatchers.Main) {
+                        if (paisObtenido != null) {
+                            misPaises.add(paisObtenido)
+                            val nuevaPosicion = misPaises.size - 1
+
+                            adapter.notifyItemInserted(nuevaPosicion)
+                            binding.RecyclerView.scrollToPosition(nuevaPosicion)
+                            binding.EditText.text.clear()
+                        } else {
+                            Toast.makeText(this@MainActivity, "País no encontrado en la API", Toast.LENGTH_SHORT).show()
+                        }
+                    }
                 }
-                misTextos.add(textoConBandera)
-                val nuevaPosicion = misTextos.size - 1
-                adapter.notifyItemInserted(nuevaPosicion)
-                binding.RecyclerView.scrollToPosition(nuevaPosicion)
-                binding.EditText.text.clear()
+            } else {
+                Toast.makeText(this, "Escribe el nombre de un país", Toast.LENGTH_SHORT).show()
             }
         }
     }
+    private fun consultarApiRestCountries(nombre: String): Pais? {
+        var connection: HttpURLConnection? = null
+        return try {
+            val q = URLEncoder.encode(nombre.trim(), "UTF-8")
+            val url = URI.create(
+                "https://api.restcountries.com/countries/v5/name?q=$q" +
+                        "&response_fields=names.common,capitals,codes.alpha_2"
+            ).toURL()
 
-    private fun agregarBandera(pais: String): String {
-        val nombreLimpio = pais.lowercase()
-        val bandera = when {
-            "canadá" in nombreLimpio || "canada" in nombreLimpio -> "🇨🇦"
-            "zimbabue" in nombreLimpio || "zimbabwe" in nombreLimpio -> "🇿🇼"
-            "afganistán" in nombreLimpio || "afganistan" in nombreLimpio -> "🇦🇫"
-            "rusia" in nombreLimpio || "russia" in nombreLimpio -> "🇷🇺"
-            "serbia" in nombreLimpio -> "🇸🇷"
-            "colombia" in nombreLimpio -> "🇨🇴"
-            "venezuela" in nombreLimpio -> "🇻🇪"
-            "suiza" in nombreLimpio || "switzerland" in nombreLimpio -> "🇨🇭"
-            "polonia" in nombreLimpio || "poland" in nombreLimpio -> "🇵🇱"
-            "angola" in nombreLimpio -> "🇦🇴"
-            "españa" in nombreLimpio || "espana" in nombreLimpio -> "🇪🇸"
-            "méxico" in nombreLimpio || "mexico" in nombreLimpio -> "🇲🇽"
-            "argentina" in nombreLimpio -> "🇦🇷"
-            "brasil" in nombreLimpio || "brazil" in nombreLimpio -> "🇧🇷"
-            "chile" in nombreLimpio -> "🇨🇱"
-            "perú" in nombreLimpio || "peru" in nombreLimpio -> "🇵🇪"
-            "francia" in nombreLimpio || "france" in nombreLimpio -> "🇫🇷"
-            "alemania" in nombreLimpio || "germany" in nombreLimpio -> "🇩🇪"
-            "italia" in nombreLimpio || "italy" in nombreLimpio -> "🇮🇹"
-            "portugal" in nombreLimpio -> "🇵🇹"
-            "estados unidos" in nombreLimpio || "eeuu" in nombreLimpio || "usa" in nombreLimpio -> "🇺🇸"
-            "japón" in nombreLimpio || "japon" in nombreLimpio || "japan" in nombreLimpio -> "🇯🇵"
-            "china" in nombreLimpio -> "🇨🇳"
-            "reino unido" in nombreLimpio || "uk" in nombreLimpio -> "🇬🇧"
-            else -> "🏳️"
+            connection = url.openConnection() as HttpURLConnection
+            connection.requestMethod = "GET"
+            connection.connectTimeout = 5000
+            connection.readTimeout = 5000
+            connection.setRequestProperty("Authorization", "Bearer $API_KEY")
+            connection.setRequestProperty("Accept", "application/json")
+
+            if (connection.responseCode != 200) {
+                Log.e("API", "HTTP ${connection.responseCode}: " +
+                        connection.errorStream?.bufferedReader()?.readText())
+                return null
+            }
+
+            val body = connection.inputStream.bufferedReader().use { it.readText() }
+            val objects = JSONObject(body).getJSONObject("data").getJSONArray("objects")
+            if (objects.length() == 0) return null
+
+            var country = objects.getJSONObject(0)
+            for (i in 0 until objects.length()) {
+                val c = objects.getJSONObject(i)
+                if (c.getJSONObject("names").getString("common")
+                        .equals(nombre.trim(), ignoreCase = true)) {
+                    country = c
+                    break
+                }
+            }
+
+            val paisNombre = country.getJSONObject("names").getString("common")
+
+            val capitales = country.optJSONArray("capitals")
+            val capitalNombre = if (capitales != null && capitales.length() > 0)
+                capitales.getJSONObject(0).optString("name", "No capital")
+            else "No capital"
+
+            val cca2 = country.optJSONObject("codes")?.optString("alpha_2", "")?.lowercase().orEmpty()
+            val urlBandera = "https://flags.restcountries.com/v5/w320/$cca2.png"
+
+            Pais(paisNombre, capitalNombre, urlBandera)
+        } catch (e: Exception) {
+            Log.e("API", "Error consultando país", e)
+            null
+        } finally {
+            connection?.disconnect()
         }
-        return "$bandera $pais"
     }
+
+
 }
