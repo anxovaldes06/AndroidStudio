@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">b17_RecyclerView</string>
+    <string name="titulo">b17_VisualizaçãoDoReciclador</string>
+    <string name="editText_hint">Digite o nome</string>
+    <string name="Button">ADICIONAR</string>
+
+</resources>
