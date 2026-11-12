@@ -49,6 +49,6 @@
         android:contentDescription="@string/app_name"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/team"
-        tools:srcCompat="@drawable/image6" />
+        tools:srcCompat="@drawable/racing_ferrol" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

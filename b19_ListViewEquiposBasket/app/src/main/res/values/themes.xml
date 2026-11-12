@@ -1,0 +1,8 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.b19_ListViewEquiposBasket" parent="Theme.Material3.DayNight.NoActionBar">
+
+    </style>
+
+    <style name="Base.Theme.b19_ViewEquiposBasket" parent="Base.Theme.b19_ListViewEquiposBasket" />
+</resources>
